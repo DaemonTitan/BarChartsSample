@@ -61,7 +61,6 @@ struct Home: View {
             // MARK: Simple Updated Values for Segmented tabs
             .onChange(of: currentTap) {
                 dataViewModel.itemData = sampleData
-                
                 if currentTap != "7 Days" {
                     for (index,_) in dataViewModel.itemData.enumerated() {
                         dataViewModel.itemData[index].views = .random(in: 1500...10000)
